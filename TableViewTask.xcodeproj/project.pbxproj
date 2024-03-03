@@ -16,6 +16,11 @@
 		2AE8C5122B9487DD00513E41 /* TableViewTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8C5112B9487DD00513E41 /* TableViewTaskTests.swift */; };
 		2AE8C51C2B9487DD00513E41 /* TableViewTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8C51B2B9487DD00513E41 /* TableViewTaskUITests.swift */; };
 		2AE8C51E2B9487DD00513E41 /* TableViewTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8C51D2B9487DD00513E41 /* TableViewTaskUITestsLaunchTests.swift */; };
+		2AE8C52D2B94885600513E41 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8C52C2B94885600513E41 /* Student.swift */; };
+		2AE8C5302B94894C00513E41 /* StudentTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8C52F2B94894C00513E41 /* StudentTableView.swift */; };
+		2AE8C5322B948EB700513E41 /* DetailStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8C5312B948EB700513E41 /* DetailStudentViewController.swift */; };
+		2AE8C5342B948F2A00513E41 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE8C5332B948F2A00513E41 /* SnapKit */; };
+		2AE8C5362B948F2A00513E41 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE8C5352B948F2A00513E41 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,9 @@
 		2AE8C5172B9487DD00513E41 /* TableViewTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE8C51B2B9487DD00513E41 /* TableViewTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTaskUITests.swift; sourceTree = "<group>"; };
 		2AE8C51D2B9487DD00513E41 /* TableViewTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2AE8C52C2B94885600513E41 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		2AE8C52F2B94894C00513E41 /* StudentTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableView.swift; sourceTree = "<group>"; };
+		2AE8C5312B948EB700513E41 /* DetailStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStudentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE8C5342B948F2A00513E41 /* SnapKit in Frameworks */,
+				2AE8C5362B948F2A00513E41 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +109,14 @@
 		2AE8C4F92B9487DC00513E41 /* TableViewTask */ = {
 			isa = PBXGroup;
 			children = (
-				2AE8C4FA2B9487DC00513E41 /* AppDelegate.swift */,
-				2AE8C4FC2B9487DC00513E41 /* SceneDelegate.swift */,
+				2AE8C52B2B94880C00513E41 /* Supporting */,
 				2AE8C4FE2B9487DC00513E41 /* ViewController.swift */,
 				2AE8C5002B9487DC00513E41 /* Main.storyboard */,
 				2AE8C5032B9487DD00513E41 /* Assets.xcassets */,
 				2AE8C5052B9487DD00513E41 /* LaunchScreen.storyboard */,
 				2AE8C5082B9487DD00513E41 /* Info.plist */,
+				2AE8C52E2B94891C00513E41 /* Models */,
+				2AE8C5372B9492A600513E41 /* VCs */,
 			);
 			path = TableViewTask;
 			sourceTree = "<group>";
@@ -127,6 +138,32 @@
 			path = TableViewTaskUITests;
 			sourceTree = "<group>";
 		};
+		2AE8C52B2B94880C00513E41 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				2AE8C4FA2B9487DC00513E41 /* AppDelegate.swift */,
+				2AE8C4FC2B9487DC00513E41 /* SceneDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		2AE8C52E2B94891C00513E41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AE8C52C2B94885600513E41 /* Student.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2AE8C5372B9492A600513E41 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				2AE8C52F2B94894C00513E41 /* StudentTableView.swift */,
+				2AE8C5312B948EB700513E41 /* DetailStudentViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +180,10 @@
 			dependencies = (
 			);
 			name = TableViewTask;
+			packageProductDependencies = (
+				2AE8C5332B948F2A00513E41 /* SnapKit */,
+				2AE8C5352B948F2A00513E41 /* SnapKit-Dynamic */,
+			);
 			productName = TableViewTask;
 			productReference = 2AE8C4F72B9487DC00513E41 /* TableViewTask.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +256,9 @@
 				Base,
 			);
 			mainGroup = 2AE8C4EE2B9487DC00513E41;
+			packageReferences = (
+				2AE8C52A2B9487FE00513E41 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2AE8C4F82B9487DC00513E41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +305,9 @@
 				2AE8C4FF2B9487DC00513E41 /* ViewController.swift in Sources */,
 				2AE8C4FB2B9487DC00513E41 /* AppDelegate.swift in Sources */,
 				2AE8C4FD2B9487DC00513E41 /* SceneDelegate.swift in Sources */,
+				2AE8C5322B948EB700513E41 /* DetailStudentViewController.swift in Sources */,
+				2AE8C5302B94894C00513E41 /* StudentTableView.swift in Sources */,
+				2AE8C52D2B94885600513E41 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +648,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AE8C52A2B9487FE00513E41 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AE8C5332B948F2A00513E41 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AE8C52A2B9487FE00513E41 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2AE8C5352B948F2A00513E41 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AE8C52A2B9487FE00513E41 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2AE8C4EF2B9487DC00513E41 /* Project object */;
 }
